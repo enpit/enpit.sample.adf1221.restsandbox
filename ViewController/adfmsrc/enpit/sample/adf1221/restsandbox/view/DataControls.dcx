@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.0.31" id="DataControls"
+                    Package="enpit.sample.adf1221.restsandbox.view">
+  <RestDataControl id="emprestdc" FactoryClass="oracle.adf.model.rest.RestDataControlFactoryImpl"
+                   ImplDef="oracle.adf.model.rest.RestDCDefinition"
+                   Definition="enpit.sample.adf1221.restsandbox.view.emprestdc"
+                   BeanClass="enpit.sample.adf1221.restsandbox.view.emprestdc"
+                   xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Describe ConnectionName="empconn"/>
+  </RestDataControl>
+</DataControlConfigs>

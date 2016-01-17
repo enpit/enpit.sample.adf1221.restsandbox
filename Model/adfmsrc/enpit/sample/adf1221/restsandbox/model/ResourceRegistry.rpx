@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.0.31" id="ResourceRegistry"
+             SeparateXMLFiles="false" Package="enpit.sample.adf1221.restsandbox.model" ClientType="Generic">
+  <pageMap>
+    <page path="v1_department" usageId="v1_HRAppModule_DepartmentsViewResources"/>
+    <page path="v1_employee" usageId="v1_HRAppModule_EmployeesViewResources"/>
+    <page path="v2_department" usageId="v2_HRAppModule_DepartmentsViewResources"/>
+    <page path="v3_employee" usageId="v3_HRAppModule_EmployeesViewResources"/>
+    <page path="v2_deptcanonical" usageId="v2_HRAppModule_CanonicalDeptResources"/>
+    <page path="v3_emprowfinder" usageId="v3_HRAppModule_EmployeesViewResources"/>
+    <page path="v4_employee" usageId="v4_HRAppModule_EmployeesViewResources"/>
+  </pageMap>
+  <dataControlUsages>
+    <BC4JDataControl id="HRAppModuleDataControl" Package="enpit.sample.adf1221.restsandbox.model.service"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="HRAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+  <pageDefinitionUsages>
+    <page id="v1_HRAppModule_DepartmentsViewResources"
+          path="enpit.sample.adf1221.restsandbox.model.service.rest.v1.HRAppModule_DepartmentsViewResources"/>
+    <page id="v1_HRAppModule_EmployeesViewResources"
+          path="enpit.sample.adf1221.restsandbox.model.service.rest.v1.HRAppModule_EmployeesViewResources"/>
+    <page id="v2_HRAppModule_DepartmentsViewResources"
+          path="enpit.sample.adf1221.restsandbox.model.service.rest.v2.HRAppModule_DepartmentsViewResources"/>
+    <page id="v3_HRAppModule_EmployeesViewResources"
+          path="enpit.sample.adf1221.restsandbox.model.service.rest.v3.HRAppModule_EmployeesViewResources"/>
+    <page id="v2_HRAppModule_CanonicalDeptResources"
+          path="enpit.sample.adf1221.restsandbox.model.service.rest.v2.HRAppModule_CanonicalDeptResources"/>
+    <page id="v4_HRAppModule_EmployeesViewResources"
+          path="enpit.sample.adf1221.restsandbox.model.service.rest.v4.HRAppModule_EmployeesViewResources"/>
+  </pageDefinitionUsages>
+</Application>

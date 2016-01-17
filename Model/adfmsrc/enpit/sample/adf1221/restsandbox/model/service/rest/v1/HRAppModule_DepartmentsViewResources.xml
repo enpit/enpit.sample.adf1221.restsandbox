@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31"
+                id="HRAppModule_DepartmentsViewResources"
+                Package="enpit.sample.adf1221.restsandbox.model.service.rest.v1" usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="DepartmentsView1" RangeSize="5" DataControl="HRAppModuleDataControl"
+              id="DepartmentsView1Iter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="DepartmentsView1Iter" id="department" AccessorFolder="Always">
+      <nodeDefinition DefName="enpit.sample.adf1221.restsandbox.model.query.DepartmentsView"
+                      Name="enpit.sample.adf1221.restsandbox.model.query.DepartmentsView"/>
+    </tree>
+  </bindings>
+</pageDefinition>

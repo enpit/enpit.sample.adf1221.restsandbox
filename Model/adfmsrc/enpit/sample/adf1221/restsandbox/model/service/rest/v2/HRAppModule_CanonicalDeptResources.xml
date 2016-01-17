@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31"
+                id="HRAppModule_CanonicalDeptResources"
+                Package="enpit.sample.adf1221.restsandbox.model.service.rest.v2" usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CanonicalDept1" RangeSize="5" DataControl="HRAppModuleDataControl" id="CanonicalDept1Iter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CanonicalDept1Iter" id="deptcanonical" AccessorFolder="Always">
+      <nodeDefinition DefName="enpit.sample.adf1221.restsandbox.model.query.CanonicalDept"
+                      Name="enpit.sample.adf1221.restsandbox.model.query.CanonicalDept">
+        <Properties>
+          <SchemaBasedProperties>
+            <ResourceRef>
+              <Internal value="department"/>
+            </ResourceRef>
+          </SchemaBasedProperties>
+        </Properties>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

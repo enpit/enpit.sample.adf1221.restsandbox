@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31"
+                id="HRAppModule_EmployeesViewResources"
+                Package="enpit.sample.adf1221.restsandbox.model.service.rest.v4" usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeesView1" RangeSize="5" DataControl="HRAppModuleDataControl" id="EmployeesView1Iter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeesView1Iter" id="employee" AccessorFolder="Always">
+      <nodeDefinition DefName="enpit.sample.adf1221.restsandbox.model.query.EmployeesView"
+                      Name="enpit.sample.adf1221.restsandbox.model.query.EmployeesView"
+                      HintsSuffix="NurEinigeAttribute"/>
+    </tree>
+    <methodAction IterBinding="EmployeesView1Iter" id="doSomethingInVORow" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="doSomethingInVORow" IsViewObjectMethod="false"
+                  DataControl="HRAppModuleDataControl" InstanceName="bindings.EmployeesView1Iter.currentRow"
+                  IsLocalObjectReference="true"
+                  ReturnName="data.HRAppModuleDataControl.methodResults.doSomethingInVORow_doSomethingInVORow_doSomethingInVORow_result">
+      <NamedData NDName="param1" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>
