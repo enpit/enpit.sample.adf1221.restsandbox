@@ -18,10 +18,10 @@
       </amconfig-overrides>
     </startup>
     <versions>
-      <version name="v4" displayName="v4"/>
       <version name="v3" displayName="v3" lifecycle="active"/>
       <version name="v2" displayName="v2" lifecycle="deprecated"/>
       <version name="v1" displayName="v1" lifecycle="desupported"/>
+      <version name="v4" displayName="v4"/>
     </versions>
   </adf-adfm-config>
 </adf-config>

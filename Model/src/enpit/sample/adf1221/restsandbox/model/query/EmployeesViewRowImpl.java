@@ -36,6 +36,7 @@ public class EmployeesViewRowImpl extends ViewRowImpl implements EmployeesViewRo
         CommissionPct,
         ManagerId,
         DepartmentId,
+        TrEmail,
         DepartmentsView,
         EmployeesView,
         DepartmentsView1,
@@ -76,6 +77,7 @@ public class EmployeesViewRowImpl extends ViewRowImpl implements EmployeesViewRo
     public static final int COMMISSIONPCT = AttributesEnum.CommissionPct.index();
     public static final int MANAGERID = AttributesEnum.ManagerId.index();
     public static final int DEPARTMENTID = AttributesEnum.DepartmentId.index();
+    public static final int TREMAIL = AttributesEnum.TrEmail.index();
     public static final int DEPARTMENTSVIEW = AttributesEnum.DepartmentsView.index();
     public static final int EMPLOYEESVIEW = AttributesEnum.EmployeesView.index();
     public static final int DEPARTMENTSVIEW1 = AttributesEnum.DepartmentsView1.index();
@@ -269,6 +271,22 @@ public class EmployeesViewRowImpl extends ViewRowImpl implements EmployeesViewRo
      */
     public void setDepartmentId(Integer value) {
         setAttributeInternal(DEPARTMENTID, value);
+    }
+
+    /**
+     * Gets the attribute value for the calculated attribute TrEmail.
+     * @return the TrEmail
+     */
+    public String getTrEmail() {
+        return (String) getAttributeInternal(TREMAIL);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for the calculated attribute TrEmail.
+     * @param value value to set the  TrEmail
+     */
+    public void setTrEmail(String value) {
+        setAttributeInternal(TREMAIL, value);
     }
 
     /**

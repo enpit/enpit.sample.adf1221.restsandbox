@@ -136,6 +136,16 @@
     EntityAttrName="DepartmentId"
     EntityUsage="Employees"
     AliasName="DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="TrEmail"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR"/>
   <ViewCriteria
     Name="findEmpByEmail"
     ViewObjectName="enpit.sample.adf1221.restsandbox.model.query.EmployeesView"
@@ -210,18 +220,19 @@
     </Method>
   </ClientRowInterface>
   <RowFinders>
-    <ExpressionRowFinder
+    <AttrValueRowFinder
       Name="FindRowByEmail"
       FetchLimit="1">
       <ViewCriteriaUsage
         Name="findEmpByEmail"
         FullName="enpit.sample.adf1221.restsandbox.model.query.EmployeesView.findEmpByEmail"/>
-      <VarExpressionMap
+      <VarAttributeMap
         Name="FindRowByEmailMap">
-        <VariableExpressionMapping
+        <VariableAttributeMapping
           Name="EmailBindVar"
-          Variable="EmailBindVar"/>
-      </VarExpressionMap>
-    </ExpressionRowFinder>
+          Variable="EmailBindVar"
+          Attribute="TrEmail"/>
+      </VarAttributeMap>
+    </AttrValueRowFinder>
   </RowFinders>
 </ViewObject>
